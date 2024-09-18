@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tugas jQuery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" 
+      rel="stylesheet"
+    />
+    <link 
+      href="style.css"
+      rel="stylesheet" 
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="content">
+        <h1>Kiww Kiww</h1>
+        <button id="changeText">Coba Pencet Deh!</button>
+      </div>
+
+      <img class="foto" src="https://lh3.googleusercontent.com/1cxPybuufQk5f4QMY6YUdC8J9MquVYDuywOQtk8uLSKPBJT-yjQFUBdb6Iv6az3biA" alt="">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      const array = [
+        "Aku ada pantun buat kamu",
+        "Tong kosong, nyaring bunyinya",
+        "Kalo hatimu kosong, bolehkah aku mengisinya?<3",
+        "Awwww",
+      ];
+
+      const yarra = [
+        "Apaan tuhh",
+        "Cakepp",
+        "Bolehh",
+        "Awwww",  
+      ];
+      let index = 0;
+
+      $("#changeText").click(() => {
+        $("h1").text(array[index]);
+      });
+      $("#changeText").click(() => {
+        $("button").text(yarra[index]);
+        index = (index + 1);
+
+        if ($("button").text() === "Awwww") {
+          $(".foto").fadeIn();
+        }
+      });
+    </script>
+  </body>
+</html>
