@@ -46,11 +46,11 @@
       });
       $("#changeText").click(() => {
         $("button").text(yarra[index]);
-        index = (index + 1) % array.length;
+        index = (index + 1);
 
         if ($("button").text() === "Awwww") {
           $(".foto").fadeIn(); 
-          index = (index + 1) % array.length;
+          index = (index + 1);
         }
       });
     </script>
