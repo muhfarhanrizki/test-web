@@ -46,7 +46,7 @@
       });
       $("#changeText").click(() => {
         $("button").text(yarra[index]);
-        index = (index + 1);
+        index = (index + 1) % array.length;
 
         if ($("button").text() === "Awwww") {
           $(".foto").fadeIn();
