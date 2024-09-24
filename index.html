@@ -30,14 +30,16 @@
         "Aku ada pantun buat kamu",
         "Eh, ga jadi deh",
         "Belum pantun aja kamu udah cakep<3",
-        "Awwww",
+        "Kalo gitu pinjam dulu seratus",
+        "HAHAHA CANDA, btw semangat nugasnya kak",
       ];
 
       const yarra = [
         "Apaan tuhh",
-        "Pencet",
-        "Pencet Lagi",
-        "Awwww",  
+        "Kenapa",
+        "Cringe ya?",
+        "Pliss mau",  
+        "Udah ga bisa dipencet",  
       ];
       let index = 0;
 
@@ -48,9 +50,12 @@
         $("button").text(yarra[index]);
         index = (index + 1);
 
-        if ($("button").text() === "Awwww") {
+        if ($("button").text() === "Pliss mau") {
           $(".foto").fadeIn(); 
-          index = (index + 1);
+        }
+
+        if ($("button").text() === "Udah ga bisa dipencet") {
+        $(".foto").fadeOut();
         }
       });
     </script>
